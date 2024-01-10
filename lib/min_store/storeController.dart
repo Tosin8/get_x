@@ -18,3 +18,5 @@ final reviewEditingController = TextEditingController();
 final followerController = TextEditingController(); 
 final reviewNameController = TextEditingController(); 
 }
+
+// method for changing the name, increasing the follower count and changing the store status: 
