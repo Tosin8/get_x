@@ -20,3 +20,15 @@ final reviewNameController = TextEditingController();
 }
 
 // method for changing the name, increasing the follower count and changing the store status: 
+
+updateStoreName(String name) {
+  storeName(name); 
+}
+
+updateFollowerCount() {
+  followerCount(followerCount.value + 1); 
+}
+
+void storeStatusOpen(bool isOpen){
+  storeStatus(isOpen); 
+}
