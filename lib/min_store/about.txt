@@ -1,0 +1,12 @@
+Resource: logrocket.
+
+The application is to create a storee, that user can: 
+* change the name of the storee
+* add follower names
+* add follower count
+* change the status of the store from open to closed and vice versa
+* add reviews to the store
+* change the theme of the store from light to dark
+
+The project will explain state management, dependency managment, route management, storage and themes. 
+

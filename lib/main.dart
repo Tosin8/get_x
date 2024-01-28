@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import 'min_store/storeController.dart';
+
 void main() {
   runApp(const MyApp());
 }
