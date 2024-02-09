@@ -9,4 +9,12 @@ class AuthController extends GetxController{
     super.onReady();
     _setInitialScreen(); 
   }
+
+  _setInitialScreen() {
+    if(!isLoggedIn.value){
+      Get.offAll(() => AuthenticationScreen()); 
+    } else {
+      Get.offAll(() => HomeScreen());
+    }
+  }
 }
