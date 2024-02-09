@@ -14,12 +14,13 @@ class AuthController extends GetxController{
   void onReady(){
     super.onReady();
     firebaseUser = Rx<User>(auth.currentUser!);
+    
     firebaseUser.bindStream(auth.userChanges());
-    _setInitialScreen(); 
+    ever(firebaseUser, _setInitialScreen as WorkerCallback<User>); 
   }
 
   _setInitialScreen() {
-    if(!isLoggedIn.value){
+    if(user == null){
       Get.offAll(() => AuthenticationScreen()); 
     } else {
       Get.offAll(() => const HomeScreen());
