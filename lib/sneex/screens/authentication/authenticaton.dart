@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 
 import '../../controllers/appController.dart';
+import 'bottomText.dart';
 
 class AuthenticationScreen extends StatelessWidget {
   final AppController _appController = Get.find();
@@ -47,7 +48,7 @@ class AuthenticationScreen extends StatelessWidget {
                   _appController.changeDIsplayedAuthWidget();
                 },
                 text1: "Already have an account?",
-                text2: "Sign in!!",
+                text2: "Sign in!!", key: null,
               ),
             ),
           ],
