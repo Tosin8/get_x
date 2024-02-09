@@ -1,5 +1,7 @@
 import 'package:get/get.dart';
 
+import '../../home.dart';
+
 class AuthController extends GetxController{
   static AuthController instance = Get.find();
   RxBool isLoggedIn = false.obs; 
