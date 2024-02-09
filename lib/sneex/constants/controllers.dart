@@ -4,7 +4,7 @@ import '../controllers/appController.dart';
 
 AuthController authController = AuthController.instance; 
 AppController appController = AppController.instance; 
-UserController userController = UserController.instance; 
-CartController cartController = CartController.instance; 
+// UserController userController = UserController.instance; 
+// CartController cartController = CartController.instance; 
 
-PaymentController paymentController = PaymentController.instance; 
+// PaymentController paymentController = PaymentController.instance; 

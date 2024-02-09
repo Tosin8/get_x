@@ -1,6 +1,10 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
+
+import '../../controllers/appController.dart';
 
 class AuthenticationScreen extends StatelessWidget {
   final AppController _appController = Get.find();
