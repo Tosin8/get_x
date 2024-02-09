@@ -8,16 +8,16 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white, 
-        iconTheme: IconThemeData(color: Colors.black),
-        title: Text("Sneex", style: TextStyle(color: Colors.black, fontWeight: FontWeight.w400),),
+        iconTheme: const IconThemeData(color: Colors.black),
+        title: const Text("Sneex", style: TextStyle(color: Colors.black, fontWeight: FontWeight.w400),),
         actions: [
           IconButton(onPressed: (){}, 
-          icon: Icon(Icons.shopping_cart))
+          icon: const Icon(Icons.shopping_cart))
         ],
         elevation: 0, centerTitle: true,
       ),
       backgroundColor: Colors.white, 
-      drawer: Drawer(),
+      drawer: const Drawer(),
 
     );
   }
