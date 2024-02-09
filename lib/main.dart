@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import 'home.dart';
-import 'min_store/storeController.dart';
+import 'sneex/storeController.dart';
 
 void main() {
   runApp(const MyApp());
