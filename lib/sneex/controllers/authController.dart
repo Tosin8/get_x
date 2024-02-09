@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
 
+import '../screens/authentication/authenticaton.dart';
 import '../screens/home.dart';
 import '../constants/firebase.dart';
 
@@ -21,7 +22,7 @@ class AuthController extends GetxController{
     if(!isLoggedIn.value){
       Get.offAll(() => AuthenticationScreen()); 
     } else {
-      Get.offAll(() => HomeScreen());
+      Get.offAll(() => const HomeScreen());
     }
   }
 }
