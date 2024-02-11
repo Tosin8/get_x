@@ -19,7 +19,7 @@ class AuthController extends GetxController{
     ever(firebaseUser, _setInitialScreen as WorkerCallback<User>); 
   }
 
-  _setInitialScreen() {
+  _setInitialScreen(User user) {
     if(user == null){
       Get.offAll(() => AuthenticationScreen()); 
     } else {
