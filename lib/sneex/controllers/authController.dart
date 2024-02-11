@@ -14,6 +14,7 @@ class AuthController extends GetxController{
   TextEditingController name = TextEditingController(); 
   TextEditingController email = TextEditingController(); 
   TextEditingController password = TextEditingController(); 
+  String usersCollection = 'users'; 
 
   @override
   void onReady(){
@@ -43,7 +44,9 @@ Get.snackbar('Sign In Failed', 'Try again');
   void signUp() async{ 
     try{
 await auth.createUserWithEmailAndPassword(email: email.text.trim(), 
-password: password.text.trim()); 
+password: password.text.trim()).then((result) {
+  firebaseFirestore.collection(usersCollection); 
+}); 
     } catch(e){
       debugPrint(e.toString()); 
 Get.snackbar('Sign In Failed', 'Try again'); 
