@@ -8,13 +8,13 @@ class CartItemModel {
   static const PRODUCT_ID = "productId";
 
 
-  String id;
-  String image;
-  String name;
-  int quantity;
-  double cost;
-   String productId;
-   double price;
+ late  String id;
+  late String image;
+  late String name;
+  late int quantity;
+  late double cost;
+   late String productId;
+   late double price;
 
 
 
