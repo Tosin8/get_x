@@ -1,4 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 
 import '../screens/authentication/authenticaton.dart';
@@ -9,6 +10,10 @@ class AuthController extends GetxController{
   static AuthController instance = Get.find();
   late Rx<User> firebaseUser; 
   RxBool isLoggedIn = false.obs; 
+  // adding editing controllers 
+  TextEditingController name = TextEditingController(); 
+  TextEditingController email = TextEditingController(); 
+  TextEditingController password = TextEditingController(); 
 
   @override
   void onReady(){
@@ -16,7 +21,7 @@ class AuthController extends GetxController{
     firebaseUser = Rx<User>(auth.currentUser!);
     
     firebaseUser.bindStream(auth.userChanges());
-    ever(firebaseUser, _setInitialScreen as WorkerCallback<User>); 
+    ever(firebaseUser, _setInitialScreen); 
   }
 
   _setInitialScreen(User user) {
