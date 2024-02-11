@@ -1,4 +1,5 @@
 import 'package:get_x/sneex/controllers/authController.dart';
+import 'package:get_x/sneex/controllers/product_controller.dart';
 
 import '../controllers/appController.dart';
 import '../controllers/cart_controller.dart';
@@ -10,3 +11,4 @@ AppController appController = AppController.instance;
  CartController cartController = CartController.instance; 
 
  PaymentsController paymentsController = PaymentsController.instance; 
+ ProductsController productsController = ProductsController.instance; 
