@@ -21,7 +21,7 @@ class AuthController extends GetxController{
     super.onReady();
     firebaseUser = Rx<User>(auth.currentUser!);
     
-    firebaseUser.bindStream(auth.userChanges());
+    firebaseUser.bindStream(auth.userChanges().asBroadcastStream().cast<User>());//firebaseUser.bindStream(auth.userChanges().asBroadcastStream());
     ever(firebaseUser, _setInitialScreen); 
   }
 
@@ -45,7 +45,7 @@ Get.snackbar('Sign In Failed', 'Try again');
     try{
 await auth.createUserWithEmailAndPassword(email: email.text.trim(), 
 password: password.text.trim()).then((result) {
-  String _userId = result.user.uid; 
+  String _userId = result.user!.uid; 
   firebaseFirestore.collection(usersCollection).doc(_userId).set({
     "name": name.text.trim(), 
     "id": _userId, 
