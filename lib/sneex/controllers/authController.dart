@@ -26,4 +26,7 @@ class AuthController extends GetxController{
       Get.offAll(() => const HomeScreen());
     }
   }
+  void signIn(){}
+  void signUp(){}
+  void signOut(){}
 }
