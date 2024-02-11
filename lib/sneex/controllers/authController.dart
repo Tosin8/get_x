@@ -31,7 +31,25 @@ class AuthController extends GetxController{
       Get.offAll(() => const HomeScreen());
     }
   }
-  void signIn(){}
-  void signUp(){}
-  void signOut(){}
+  void signIn() async{ 
+    try{
+await auth.signInWithEmailAndPassword(email: email.text.trim(), 
+password: password.text.trim()); 
+    } catch(e){
+      debugPrint(e.toString()); 
+Get.snackbar('Sign In Failed', 'Try again'); 
+    }
+  }
+  void signUp() async{ 
+    try{
+await auth.createUserWithEmailAndPassword(email: email.text.trim(), 
+password: password.text.trim()); 
+    } catch(e){
+      debugPrint(e.toString()); 
+Get.snackbar('Sign In Failed', 'Try again'); 
+    }
+  }
+  void signOut() async{ 
+    auth.signOut();
+  }
 }
