@@ -45,7 +45,12 @@ Get.snackbar('Sign In Failed', 'Try again');
     try{
 await auth.createUserWithEmailAndPassword(email: email.text.trim(), 
 password: password.text.trim()).then((result) {
-  firebaseFirestore.collection(usersCollection); 
+  String _userId = result.user.uid; 
+  firebaseFirestore.collection(usersCollection).doc(_userId).set({
+    "name": name.text.trim(), 
+    "id": _userId, 
+    "email": email.text.trim()
+  }); 
 }); 
     } catch(e){
       debugPrint(e.toString()); 
