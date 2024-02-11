@@ -1,5 +1,6 @@
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
+import 'package:logger/logger.dart';
 import 'package:stripe_payment/stripe_payment.dart';
 import 'package:untitled/constants/app_constants.dart';
 import 'package:untitled/constants/controllers.dart';
@@ -14,6 +15,7 @@ import 'package:uuid/uuid.dart';
 import '../constants/controllers.dart';
 import '../constants/firebase.dart';
 import '../model/payments.dart';
+import '../utils/custom_text.dart';
 
 class PaymentsController extends GetxController {
   static PaymentsController instance = Get.find();
