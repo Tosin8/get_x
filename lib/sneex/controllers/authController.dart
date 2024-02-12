@@ -52,7 +52,7 @@ await auth.createUserWithEmailAndPassword(email: email.text.trim(),
 password: password.text.trim()).then((result) {
   String _userId = result.user!.uid; 
   _addUserToFirestore(_userId);
-  _initializeUserMode(_userId);
+  _initializeUserModel(_userId);
   
 }); 
     } catch(e){
@@ -74,7 +74,7 @@ firebaseFirestore.collection(usersCollection).doc(userId).set({
   }
 
   // creating private method to initialize user model
-_initializeUserMode(String userId) async {
+_initializeUserModel(String userId) async {
   userModel.value = await firebaseFirestore
   .collection(usersCollection) 
   .doc(userId)
