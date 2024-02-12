@@ -1,10 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:get_x/sneex/constants/firebase.dart';
+import 'package:get_x/sneex/controllers/authController.dart';
 
 import 'sneex/screens/home.dart';
-import 'sneex/storeController.dart';
 
-void main() {
+
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized(); 
+  await initialization.then((value) {
+     Get.put(AppController());
+     Get.put(AuthController()); 
+  }); 
   runApp(const MyApp());
 }
 
