@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:get_x/sneex/constants/controllers.dart';
 import 'package:get_x/sneex/screens/home.dart';
 
-import '../../../widgets/custom_btn.dart';
+
+import '../../widgets/custom_btn.dart';
 
 
 class LoginWidget extends StatelessWidget {
@@ -75,8 +77,9 @@ borderRadius: BorderRadius.circular(20)
             padding: const EdgeInsets.all(25),
             child: CustomButton(
                 text: "Login", onTap: (){
-                  Get.to(HomeScreen());
-            }),
+                  authController.signIn();
+                 // Get.to(HomeScreen()); - not trying to do it manually again. 
+            }, txtColor: Colors.white, bgColor: Colors.blue, shadowColor: Colors.black87,),
           )
         ],
       ),

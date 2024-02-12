@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../utils/custom_btn.dart';
+
 
 
 class RegistrationWidget extends StatelessWidget {

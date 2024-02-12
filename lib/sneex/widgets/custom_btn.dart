@@ -7,16 +7,10 @@ class CustomButton extends StatelessWidget {
   final Color bgColor;
   final Color shadowColor;
   //final Function onTap;
-  final GestureTapCallback onTap; 
+  final GestureTapCallback onTap;
 
-  const CustomButton(
-      {required Key key,
-      required this.text,
-      required this.txtColor,
-      required this.bgColor,
-      required this.shadowColor,
-      required this.onTap})
-      : super(key: key);
+  const CustomButton({super.key, required this.text, required this.txtColor, required this.bgColor, required this.shadowColor, required this.onTap}); 
+
 
   @override
   Widget build(BuildContext context) {
