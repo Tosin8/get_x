@@ -18,7 +18,7 @@ class HomeScreen extends StatelessWidget {
       ),
       backgroundColor: Colors.white, 
       drawer: const Drawer(),
-
+body: const Center(child: CircularProgressIndicator(),)
     );
   }
 }
