@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get_x/sneex/constants/controllers.dart';
+import 'package:get_x/sneex/constants/firebase.dart';
 
 
 
@@ -34,7 +36,7 @@ class RegistrationWidget extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
                   child: TextField(
-                    controller: userController.name,
+                    controller: authController.name,
                     decoration: InputDecoration(
                         icon: Icon(Icons.person),
                         fillColor: Colors.white,
@@ -58,7 +60,7 @@ class RegistrationWidget extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
                   child: TextField(
-                    controller: userController.email,
+                    controller: authController.email,
                     decoration: InputDecoration(
                         icon: Icon(Icons.email_outlined),
                         fillColor: Colors.white,
@@ -83,7 +85,7 @@ class RegistrationWidget extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
                   child: TextField(
-                    controller: userController.password,
+                    controller: authController.password,
                     decoration: InputDecoration(
                         icon: Icon(Icons.lock),
                         fillColor: Colors.white,
