@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:get_x/sneex/constants/firebase.dart';
 import 'package:get_x/sneex/controllers/authController.dart';
 
-import 'sneex/screens/home.dart';
+import 'sneex/controllers/appController.dart';
 
 
 void main() async{
@@ -29,8 +29,19 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: HomeScreen() 
+      home: const Splash() , 
     );
   }
 }
 
+
+class Splash extends StatelessWidget {
+  const Splash({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Scaffold( 
+      body: Center(child: CircularProgressIndicator(),)
+    );
+  }
+}
