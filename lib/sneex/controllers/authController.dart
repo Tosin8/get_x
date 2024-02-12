@@ -37,7 +37,10 @@ class AuthController extends GetxController{
   void signIn() async{ 
     try{
 await auth.signInWithEmailAndPassword(email: email.text.trim(), 
-password: password.text.trim()); 
+password: password.text.trim()).then((result) {
+  String _userId = result.user!.uid; 
+  _initializeUserMode(_userId);
+}); 
     } catch(e){
       debugPrint(e.toString()); 
 Get.snackbar('Sign In Failed', 'Try again'); 
@@ -49,6 +52,7 @@ await auth.createUserWithEmailAndPassword(email: email.text.trim(),
 password: password.text.trim()).then((result) {
   String _userId = result.user!.uid; 
   _addUserToFirestore(_userId);
+  _initializeUserMode(_userId);
   
 }); 
     } catch(e){
@@ -71,6 +75,10 @@ firebaseFirestore.collection(usersCollection).doc(userId).set({
 
   // creating private method to initialize user model
 _initializeUserMode(String userId) async {
-  
+  userModel.value = await firebaseFirestore
+  .collection(usersCollection) 
+  .doc(userId)
+  .get()
+  .then((doc) => UserModel.fromSnapshot(doc));
 }
 }
