@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:get_x/sneex/constants/controllers.dart';
-import 'package:get_x/sneex/screens/home.dart';
 
 
 import '../../widgets/custom_btn.dart';
@@ -11,7 +9,7 @@ class LoginWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Container(
-      margin: EdgeInsets.all(10),
+      margin: const EdgeInsets.all(10),
       decoration: BoxDecoration(
         color: Colors.white,
 boxShadow: [
@@ -30,7 +28,7 @@ borderRadius: BorderRadius.circular(20)
             children: [
               Container(
                 width: MediaQuery.of(context).size.width / 1.2,
-                margin: EdgeInsets.only(top: 30),
+                margin: const EdgeInsets.only(top: 30),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(25),
                   color: Colors.grey.withOpacity(.3),
@@ -38,8 +36,8 @@ borderRadius: BorderRadius.circular(20)
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
                   child: TextField(
-                    controller: userController.email,
-                    decoration: InputDecoration(
+                    controller: authController.email, 
+                    decoration: const InputDecoration(
                         icon: Icon(Icons.email_outlined),
                         fillColor: Colors.white,
                         border: InputBorder.none,
@@ -54,16 +52,16 @@ borderRadius: BorderRadius.circular(20)
             children: [
               Container(
                 width: MediaQuery.of(context).size.width / 1.2,
-                margin: EdgeInsets.only(top: 30),
+                margin: const EdgeInsets.only(top: 30),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(25),
                   color: Colors.grey.withOpacity(.3),
                 ),
-                child: Padding(
+                child:  Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
                   child: TextField(
-                    controller: userController.password,
-                    decoration: InputDecoration(
+                    controller: authController.password, 
+                    decoration: const InputDecoration(
                         icon: Icon(Icons.lock),
                         fillColor: Colors.white,
                         border: InputBorder.none,
