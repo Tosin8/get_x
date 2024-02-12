@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'custom_text.dart';
 
@@ -38,8 +37,8 @@ class CustomButton extends StatelessWidget {
             child: CustomText(
               text: text,
               color: txtColor,
-              size: 22,
-              weight: FontWeight.normal, key: null,
+              size: 22, weight: FontWeight.normal,
+              //weight: FontWeight.normal, key: null,
             ),
           )
         ),
