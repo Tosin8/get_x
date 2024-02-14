@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
+import 'cartscreen.dart';
 import 'catalogproduct.dart';
 
 class CatalogScreen extends StatelessWidget {
@@ -16,7 +18,7 @@ class CatalogScreen extends StatelessWidget {
           children: [
             CatalogProducts(), 
             ElevatedButton(
-              onPressed: (){},
+              onPressed: () => Get.to(() => CartScreen()), 
              child: Text('Go to Cart'))],))
     );
   }
