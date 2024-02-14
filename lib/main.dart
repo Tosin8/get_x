@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get_x/sneex/constants/firebase.dart';
-import 'package:get_x/sneex/controllers/authController.dart';
 
 import 'simple_cart/catalogscreen.dart';
-import 'sneex/controllers/appController.dart';
 
 
 // void main() async{
@@ -17,7 +14,7 @@ import 'sneex/controllers/appController.dart';
 // }
 
 void main() {
-  runApp(GetMaterialApp(home: MyApp()));
+  runApp(const GetMaterialApp(home: MyApp()));
 }
 class MyApp extends StatelessWidget {
   const MyApp({super.key});

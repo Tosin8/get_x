@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -12,14 +13,14 @@ class CatalogScreen extends StatelessWidget {
     return Scaffold( 
       appBar: AppBar(
 
-        title: Text('Catalog')), 
+        title: const Text('Catalog')), 
       body: SafeArea(
         child: Column(
           children: [
-            CatalogProducts(), 
+            const CatalogProducts(), 
             ElevatedButton(
-              onPressed: () => Get.to(() => CartScreen()), 
-             child: Text('Go to Cart'))],))
+              onPressed: () => Get.to(() => const CartScreen()), 
+             child: const Text('Go to Cart'))],))
     );
   }
 }
