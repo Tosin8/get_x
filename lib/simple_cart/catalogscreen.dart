@@ -1,10 +1,23 @@
 import 'package:flutter/material.dart';
 
-class CatlogScreen extends StatelessWidget {
-  const CatlogScreen({super.key});
+import 'catalogproduct.dart';
+
+class CatalogScreen extends StatelessWidget {
+  const CatalogScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold( 
+      appBar: AppBar(
+
+        title: Text('Catalog')), 
+      body: SafeArea(
+        child: Column(
+          children: [
+            CatalogProducts(), 
+            ElevatedButton(
+              onPressed: (){},
+             child: Text('Go to Cart'))],))
+    );
   }
 }
