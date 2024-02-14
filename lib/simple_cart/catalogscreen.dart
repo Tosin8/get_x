@@ -19,8 +19,12 @@ class CatalogScreen extends StatelessWidget {
           children: [
             const CatalogProducts(), 
             ElevatedButton(
-              onPressed: () => Get.to(() => const CartScreen()), 
-             child: const Text('Go to Cart'))],))
+              onPressed: (){
+                Get.to(() => const CartScreen());
+                }, child: const Text('Go to Cart')),
+        
+           ]  )
+             )
     );
   }
 }

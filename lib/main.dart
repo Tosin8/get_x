@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import 'simple_cart/catalogscreen.dart';
+import 'dart:ui';
 
 
 // void main() async{
@@ -14,6 +15,11 @@ import 'simple_cart/catalogscreen.dart';
 // }
 
 void main() {
+   MyBackend myBackend = MyBackend();
+  PlatformDispatcher.instance.onError = (error, stack) {
+    myBackend.sendError(error, stack);
+    return true;
+  }; 
   runApp(const GetMaterialApp(home: MyApp()));
 }
 class MyApp extends StatelessWidget {
