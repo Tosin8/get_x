@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import 'model/product_model.dart';
+import 'model/product_model.dart';
+
 class CatalogProducts extends StatefulWidget {
   const CatalogProducts({super.key});
 
@@ -10,7 +13,14 @@ class CatalogProducts extends StatefulWidget {
 class _CatalogProductsState extends State<CatalogProducts> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Flexible(
+      child: 
+      ListView.builder(
+        itemCount: Product.products.lenth, 
+        itemBuilder: (BuildContext context, int index) {
+          return CatalogProductCard(); 
+        }));
+    
   }
 }
 
