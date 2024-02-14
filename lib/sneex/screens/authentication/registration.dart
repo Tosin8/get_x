@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get_x/sneex/constants/controllers.dart';
 import 'package:get_x/sneex/constants/firebase.dart';
 
+import '../../widgets/custom_btn.dart';
+
 
 
 
@@ -100,7 +102,7 @@ class RegistrationWidget extends StatelessWidget {
             padding: const EdgeInsets.all(25),
             child: CustomButton(
                 text: "Register", onTap: (){
-                    userController.signUp();
+                  
                 }),
           )
         ],
