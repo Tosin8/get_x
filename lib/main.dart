@@ -15,11 +15,7 @@ import 'dart:ui';
 // }
 
 void main() {
-   MyBackend myBackend = MyBackend();
-  PlatformDispatcher.instance.onError = (error, stack) {
-    myBackend.sendError(error, stack);
-    return true;
-  }; 
+  
   runApp(const GetMaterialApp(home: MyApp()));
 }
 class MyApp extends StatelessWidget {
