@@ -28,7 +28,7 @@ class CatalogProductCard extends StatelessWidget {
   Widget build(BuildContext context) {
     
     return Padding( 
-      padding:  EdgeInsets.symmetric(horizontal: 20), 
+      padding:  const EdgeInsets.symmetric(horizontal: 20), 
       child: Row(
         children: [
           CircleAvatar(radius: 40, 
