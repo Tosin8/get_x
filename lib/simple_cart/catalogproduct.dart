@@ -40,7 +40,11 @@ class CatalogProductCard extends StatelessWidget {
             const SizedBox(width: 20,), 
             Expanded(child: Text(Product.products[index].name, style: const TextStyle(color: Colors.black, fontWeight: FontWeight.w800),)), 
             const SizedBox(width: 30,), 
-            Expanded(child: Text('${Product.products[index].price}'))
+            Expanded(child: Text('${Product.products[index].price}')), 
+            IconButton(
+              onPressed: (){}, 
+              icon: Icon(Icons.add_circle), 
+              )
         ],
       ),
     );
