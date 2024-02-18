@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import 'cart_products.dart';
+import 'cart_total.dart';
 
 class CartScreen extends StatefulWidget {
   const CartScreen({super.key});

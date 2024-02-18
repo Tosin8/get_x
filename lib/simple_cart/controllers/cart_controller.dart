@@ -16,6 +16,10 @@ void addProduct(Product product){
   Get.snackbar('Product Added',
    'You have added the ${product.name} to the cart', 
    snackPosition: SnackPosition.BOTTOM, 
-   duration: Duration(seconds: 2), ); 
+   duration: Duration(seconds: 2), 
+   ); 
 }
+
+// to be able to access the dictionary using the get method. 
+get products => _products; 
 }
