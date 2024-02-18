@@ -34,4 +34,8 @@ void removeProduct(Product product){
     _products[product] -= 1;
   }
 }
+
+// defining the sub total price. 
+
+get productSubtotal => _products.entries.map((e) => null)
 }

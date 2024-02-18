@@ -10,16 +10,21 @@ CartProducts({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox( 
-      height: 600, 
-      child: ListView.builder(
-        itemCount: controller.products.length, 
-      itemBuilder: (BuildContext context, int index) {
-        return  CartProductCard(index: index,
-         controller: controller, 
-         product: controller.products.keys.toList()[index], 
-         quantity: controller.products.values.toList()[index] ,); 
-      },),
+
+    // the reason for using Obx is to making use of the update in our UI
+    return Obx(
+      () =>
+       SizedBox( 
+        height: 600, 
+        child: ListView.builder(
+          itemCount: controller.products.length, 
+        itemBuilder: (BuildContext context, int index) {
+          return  CartProductCard(index: index,
+           controller: controller, 
+           product: controller.products.keys.toList()[index], 
+           quantity: controller.products.values.toList()[index] ,); 
+        },),
+      ),
     );
   }
 }
@@ -53,7 +58,9 @@ class CartProductCard extends StatelessWidget {
             },
              icon: const Icon(Icons.remove_circle)),  
           Text('${quantity}'), 
-          IconButton(onPressed: (){},
+          IconButton(onPressed: (){
+            controller.addProduct(product);
+          },
              icon: const Icon(Icons.add_circle)),  
         ],
       ),
