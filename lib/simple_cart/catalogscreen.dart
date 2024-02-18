@@ -12,11 +12,14 @@ class CatalogScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold( 
       appBar: AppBar(
-
-        title: const Text('Catalog')), 
+        centerTitle: true,
+backgroundColor: Colors.blue,
+        title: const Text('Catalog', 
+        style: TextStyle(color: Colors.white),)), 
       body: SafeArea(
         child: Column(
           children: [
+            SizedBox(height: 10,), 
             const CatalogProducts(), 
             ElevatedButton(
               onPressed: (){

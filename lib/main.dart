@@ -2,12 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import 'simple_cart/catalogscreen.dart';
-import 'dart:ui';
 
 
 void main() {
   
-  runApp(const GetMaterialApp(home: MyApp()));
+  runApp(
+    const GetMaterialApp(
+      home: MyApp()));
 }
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -29,13 +30,3 @@ class MyApp extends StatelessWidget {
 }
 
 
-// class Splash extends StatelessWidget {
-//   const Splash({super.key});
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return const Scaffold( 
-//       body: Center(child: CircularProgressIndicator(),)
-//     );
-//   }
-// }

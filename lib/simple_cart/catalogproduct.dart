@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 import 'model/product_model.dart';
 
@@ -30,12 +32,15 @@ class CatalogProductCard extends StatelessWidget {
     return Padding( 
       padding:  const EdgeInsets.symmetric(horizontal: 20), 
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween, 
         children: [
           CircleAvatar(radius: 40, 
           backgroundImage: AssetImage(
             Product.products[index].imageUrl),), 
-            Text(Product.products[index].name), 
-            Text('${Product.products[index].price}')
+            const SizedBox(width: 20,), 
+            Expanded(child: Text(Product.products[index].name, style: const TextStyle(color: Colors.black, fontWeight: FontWeight.w800),)), 
+            const SizedBox(width: 30,), 
+            Expanded(child: Text('${Product.products[index].price}'))
         ],
       ),
     );
