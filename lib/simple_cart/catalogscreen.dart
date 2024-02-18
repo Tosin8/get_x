@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'cartscreen.dart';
+import 'cart/cartscreen.dart';
 import 'catalogproduct.dart';
 
 class CatalogScreen extends StatelessWidget {

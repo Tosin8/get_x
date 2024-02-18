@@ -22,4 +22,16 @@ void addProduct(Product product){
 
 // to be able to access the dictionary using the get method. 
 get products => _products; 
+
+// remove products
+void removeProduct(Product product){
+  if(_products.containsKey(product) && _products[product] == 1){
+    // if(_products[product] == 1){
+    //   _products.remove(product);
+    // }
+    _products.removeWhere((key, value) => key == product); 
+  } else {
+    _products[product] -= 1;
+  }
+}
 }

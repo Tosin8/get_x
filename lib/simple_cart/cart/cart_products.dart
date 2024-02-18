@@ -38,11 +38,23 @@ class CartProductCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding( 
-      padding: const EdgeInsets.symmetric(horizontal: 20.0), 
+      padding: const EdgeInsets.symmetric(
+        horizontal: 20.0, 
+        vertical: 10), 
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween, 
         children: [
           CircleAvatar(radius: 40,backgroundImage: AssetImage(product.imageUrl),), 
+          const SizedBox(width: 20,), 
+          Expanded(
+            child: Text(product.name)),
+            IconButton(onPressed: (){
+              controller.removeProduct(product);
+            },
+             icon: const Icon(Icons.remove_circle)),  
+          Text('${quantity}'), 
+          IconButton(onPressed: (){},
+             icon: const Icon(Icons.add_circle)),  
         ],
       ),
     );
