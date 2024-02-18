@@ -8,6 +8,7 @@ void main() {
   
   runApp(
     const GetMaterialApp(
+      debugShowCheckedModeBanner: true,
       home: MyApp()));
 }
 class MyApp extends StatelessWidget {
