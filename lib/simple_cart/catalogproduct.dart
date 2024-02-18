@@ -33,7 +33,9 @@ class CatalogProductCard extends StatelessWidget {
         children: [
           CircleAvatar(radius: 40, 
           backgroundImage: AssetImage(
-            Product.products[index].imageUrl),)
+            Product.products[index].imageUrl),), 
+            Text(Product.products[index].name), 
+            Text('${Product.products[index].price}')
         ],
       ),
     );
