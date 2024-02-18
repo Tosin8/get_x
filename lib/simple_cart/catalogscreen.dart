@@ -25,6 +25,7 @@ backgroundColor: Colors.blue,
               onPressed: (){
                 Get.to(() => const CartScreen());
                 }, child: const Text('Go to Cart')),
+                SizedBox(height: 20,), 
         
            ]  )
              )
