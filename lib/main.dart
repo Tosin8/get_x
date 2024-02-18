@@ -5,15 +5,6 @@ import 'simple_cart/catalogscreen.dart';
 import 'dart:ui';
 
 
-// void main() async{
-//   WidgetsFlutterBinding.ensureInitialized(); 
-//   await initialization.then((value) {
-//      Get.put(AppController());
-//      Get.put(AuthController()); 
-//   }); 
-//   runApp(const MyApp());
-// }
-
 void main() {
   
   runApp(const GetMaterialApp(home: MyApp()));
@@ -24,7 +15,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
