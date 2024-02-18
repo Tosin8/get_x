@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:get/get.dart';
+import 'package:get_x/simple_cart/controllers/cart_controller.dart';
 
 import 'model/product_model.dart';
 
@@ -23,8 +25,11 @@ class CatalogProducts extends StatelessWidget {
 }
 
 class CatalogProductCard extends StatelessWidget {
+  // the need to add the cart controller 
+  final cartController = Get.put(CartController()); 
   final int index; 
-  const CatalogProductCard({super.key, required this.index,  });
+  CatalogProductCard({super.key,
+   required this.index,  });
 
   @override
   Widget build(BuildContext context) {
@@ -42,7 +47,9 @@ class CatalogProductCard extends StatelessWidget {
             const SizedBox(width: 30,), 
             Expanded(child: Text('${Product.products[index].price}')), 
             IconButton(
-              onPressed: (){}, 
+              onPressed: (){
+                cartController.addProduct(Product.products[index]);
+              }, 
               icon: Icon(Icons.add_circle), 
               )
         ],
