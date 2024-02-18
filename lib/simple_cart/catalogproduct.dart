@@ -30,7 +30,7 @@ class CatalogProductCard extends StatelessWidget {
   Widget build(BuildContext context) {
     
     return Padding( 
-      padding:  const EdgeInsets.symmetric(horizontal: 20), 
+      padding:  const EdgeInsets.symmetric(horizontal: 20, vertical: 10), 
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween, 
         children: [
@@ -38,7 +38,7 @@ class CatalogProductCard extends StatelessWidget {
           backgroundImage: AssetImage(
             Product.products[index].imageUrl),), 
             const SizedBox(width: 20,), 
-            Expanded(child: Text(Product.products[index].name, style: const TextStyle(color: Colors.black, fontWeight: FontWeight.w800),)), 
+            Expanded(child: Text(Product.products[index].name, style: const TextStyle(color: Colors.black, fontWeight: FontWeight.w800, fontSize: 15),)), 
             const SizedBox(width: 30,), 
             Expanded(child: Text('${Product.products[index].price}')), 
             IconButton(
