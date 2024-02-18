@@ -37,5 +37,14 @@ void removeProduct(Product product){
 
 // defining the sub total price. 
 
-get productSubtotal => _products.entries.map((e) => null)
+get productSubtotal => _products.entries
+.map((product) => product.key.price * product.value)
+.toList(); 
+
+// defining the total price
+
+get total => _products.entries
+.map((product) => product.key.price * product.value)
+.toList().reduce((value, element) => value + element)
+.toStringAsFixed(2); 
 }
