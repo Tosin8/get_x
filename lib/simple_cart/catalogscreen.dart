@@ -20,7 +20,7 @@ backgroundColor: Colors.blue,
         child: Column(
           children: [
             SizedBox(height: 10,), 
-            const CatalogProducts(), 
+            CatalogProducts(), 
             ElevatedButton(
               onPressed: (){
                 Get.to(() => const CartScreen());
