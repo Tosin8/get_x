@@ -15,14 +15,19 @@ class CatalogProducts extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Flexible(
-      child: 
-      ListView.builder(
-      // itemCount: Product.products.length, 
-        itemBuilder: ( context, index) {
-       
-          return CatalogProductCard(index: index,); 
-        }));
+    return Obx( () =>
+
+    // adding obx into it now to make it accessible from firebase. 
+       Flexible(
+        child: 
+        ListView.builder(
+          itemCount: productController.products.length,
+        // itemCount: Product.products.length, 
+          itemBuilder: ( context, index) {
+         
+            return CatalogProductCard(index: index,); 
+          })),
+    );
     
   }
 }
@@ -30,6 +35,7 @@ class CatalogProducts extends StatelessWidget {
 class CatalogProductCard extends StatelessWidget {
   // the need to add the cart controller 
   final cartController = Get.put(CartController()); 
+  final ProductController productController = Get.find(); 
   final int index; 
   CatalogProductCard({super.key,
    required this.index,  });
