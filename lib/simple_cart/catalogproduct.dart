@@ -3,19 +3,22 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:get_x/simple_cart/controllers/cart_controller.dart';
+import 'package:get_x/simple_cart/controllers/product_controller.dart';
 
 import 'model/product_model.dart';
 
 
 class CatalogProducts extends StatelessWidget {
-  const CatalogProducts({super.key});
+  // adding controller into the catalog product
+  final productController = Get.put(ProductController());
+  CatalogProducts({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Flexible(
       child: 
       ListView.builder(
-       itemCount: Product.products.length, 
+      // itemCount: Product.products.length, 
         itemBuilder: ( context, index) {
        
           return CatalogProductCard(index: index,); 
