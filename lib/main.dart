@@ -5,7 +5,9 @@ import 'simple_cart/catalogscreen.dart';
 
 
 void main() {
-  
+  // initializing firebase
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(); 
   runApp(
     const GetMaterialApp(
       debugShowCheckedModeBanner: true,
