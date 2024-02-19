@@ -50,14 +50,31 @@ class CatalogProductCard extends StatelessWidget {
         children: [
           CircleAvatar(radius: 40, 
           backgroundImage: AssetImage(
-            Product.products[index].imageUrl),), 
+           // Product.products[index].imageUrl,
+           productController.products[index].imageUrl
+            
+            ),
+            ), 
             const SizedBox(width: 20,), 
-            Expanded(child: Text(Product.products[index].name, style: const TextStyle(color: Colors.black, fontWeight: FontWeight.w800, fontSize: 15),)), 
+            Expanded(
+              child: Text(
+productController.products[index].name ,
+                //Product.products[index].name, 
+                
+                style: const TextStyle(color: Colors.black, fontWeight: FontWeight.w800, fontSize: 15),)), 
             const SizedBox(width: 30,), 
-            Expanded(child: Text('${Product.products[index].price}')), 
+            Expanded(
+              child: Text(
+               // '${Product.products[index].price}', 
+               '${productController.products[index].price}',
+                )
+                ), 
             IconButton(
               onPressed: (){
-                cartController.addProduct(Product.products[index]);
+                // cartController.addProduct(
+                //   Product.products[index], 
+                  cartController.addProduct(productController.products[index], 
+                  );
               }, 
               icon: Icon(Icons.add_circle), 
               )
